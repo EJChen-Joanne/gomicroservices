@@ -1,0 +1,28 @@
+{
+	"folders": [
+		{
+			"path": "front-end"
+		},
+		{
+			"path": "broker-service"
+		},
+		{
+			"path": "GoMicro_project"
+		},
+		{
+			"path": "mail-service"
+		},
+		{
+			"path": "auth-service"
+		},
+		{
+			"path": "logger-service"
+		},
+		{
+			"path": "listener-service"
+		}
+	],
+	"settings": {
+		"makefile.extensionOutputFolder": "./.vscode"
+	}
+}

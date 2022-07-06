@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/EJChen/Desktop/Microservices/gomicro_ori'
+make: Leaving directory `/Users/EJChen/Desktop/Microservices/gomicro_ori'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+
