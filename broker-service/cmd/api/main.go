@@ -18,7 +18,7 @@ type Config struct {
 
 func main() {
 	// try to connect to rabbitmq for retrieving requests from queue
-	rabbitConn, err := connect()
+	rabbitConn, err := connectToRabbitmq()
 	if err != nil {
 		log.Fatalln(err)
 	}
@@ -44,7 +44,7 @@ func main() {
 }
 
 // listen to the requests from the rabbitmq
-func connect() (*amqp.Connection, error) {
+func connectToRabbitmq() (*amqp.Connection, error) {
 	var counts int64 // break down loop until error connection 5 times
 	var backOff = 1 * time.Second
 	var connection *amqp.Connection

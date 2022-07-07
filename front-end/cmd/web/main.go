@@ -1,6 +1,7 @@
 package main
 
 import (
+	"embed"
 	"fmt"
 	"html/template"
 	"log"
@@ -19,6 +20,9 @@ func main() {
 	}
 }
 
+//go:embed templates
+var templateFS embed.FS
+
 func render(w http.ResponseWriter, html_root string) {
 	html_partials := []string{
 		"base.layout.gohtml",
@@ -26,13 +30,13 @@ func render(w http.ResponseWriter, html_root string) {
 		"header.partial.gohtml",
 	}
 	templatesSli := make([]string, 0)
-	templatesSli = append(templatesSli, fmt.Sprintf("./cmd/web/templates/%s", html_root)) //format templates
+	templatesSli = append(templatesSli, fmt.Sprintf("templates/%s", html_root)) //format templates
 
 	for _, v := range html_partials {
-		templatesSli = append(templatesSli, fmt.Sprintf("./cmd/web/templates/%s", v))
+		templatesSli = append(templatesSli, fmt.Sprintf("templates/%s", v))
 	}
 
-	tpl, err := template.ParseFiles(templatesSli...)
+	tpl, err := template.ParseFS(templateFS, templatesSli...)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
