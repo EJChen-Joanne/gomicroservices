@@ -65,7 +65,7 @@ compile_front:
 ## compile_front_linux: builds the front-end linux executable
 compile_front_linux:
 	@echo "Build front-end linux..."
-	cd ../front-end && env CGO_ENABLED=0 go build -o ${FRONT_END_LINUX} ./cmd/web
+	cd ../front-end && env GOOS=linux CGO_ENABLED=0 go build -o ${FRONT_END_LINUX} ./cmd/web
 	@echo "Front-end linux compiled!"
 
 ## start: starts the front-end
