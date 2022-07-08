@@ -4,6 +4,7 @@ AUTH_BINARY=authApp
 LOGGER_BINARY=loggerApp
 MAIL_BINARY=mailApp
 LISTENER_BINARY=listenerApp
+FRONT_END_LINUX=frontEndLinux
 
 ## up: starts all containers in the background without forcing build
 up:
@@ -55,11 +56,17 @@ compile_mail:
 	cd ../mail-service && env GOOS=linux CGO_ENABLED=0 go build -o ${MAIL_BINARY} ./cmd/api
 	@echo "Mail service compiled!"
 
-## build_front: builds the front-end binary
+## compile_front: builds the front-end binary
 compile_front:
 	@echo "Build front-end binary..."
 	cd ../front-end && env CGO_ENABLED=0 go build -o ${FRONT_END_BINARY} ./cmd/web
 	@echo "Front-end compiled!"
+
+## compile_front_linux: builds the front-end linux executable
+compile_front_linux:
+	@echo "Build front-end linux..."
+	cd ../front-end && env CGO_ENABLED=0 go build -o ${FRONT_END_LINUX} ./cmd/web
+	@echo "Front-end linux compiled!"
 
 ## start: starts the front-end
 start:

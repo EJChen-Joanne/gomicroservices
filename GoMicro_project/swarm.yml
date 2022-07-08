@@ -3,13 +3,15 @@ version: '3'
 services:
 
   front-end:
-    image: ejoanne0422/front-end:1.0.0
+    image: ejoanne0422/front-end:1.0.3
     deploy:
       mode: replicated
       replicas: 1
+    environment:
+      BROKER_URL: "http://backend"
 
   broker-service:
-    image: ejoanne0422/broker-service:1.0.2
+    image: ejoanne0422/broker-service:1.0.3
     ports:
       - "8080:80"
     deploy:
@@ -23,12 +25,12 @@ services:
       replicas: 1
   
   auth-service:
-    image: ejoanne0422/auth-service:1.0.0
+    image: ejoanne0422/auth-service:1.0.1
     deploy:
       mode: replicated
       replicas: 1
     environment:
-      DNS: "host=postgres port=5432 user=postgres password=password dbname=users sslmode=disable timezone=UTC connect_timeout=5"
+      DSN: "host=postgres port=5432 user=postgres password=password dbname=users sslmode=disable timezone=UTC connect_timeout=5"
 
   logger-service:
     image: ejoanne0422/logger-service:1.0.1
