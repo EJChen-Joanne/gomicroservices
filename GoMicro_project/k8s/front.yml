@@ -22,6 +22,9 @@ spec:
           limits:
             memory: "128Mi"
             cpu: "500m"
+        env:
+          - name: BROKER_URL
+            value: "http://broker-service.info"
         ports:
           - containerPort: 8081
 

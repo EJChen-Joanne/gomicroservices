@@ -4,4 +4,4 @@ RUN mkdir /app
 
 COPY frontEndLinux /app
 
-CMD [ "/app/frontEndLinux" ]
+CMD [ "/app/frontEndLinux"]
