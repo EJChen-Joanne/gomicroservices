@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: front-end
-        image: "ejoanne0422/front-end:1.0.3"
+        image: "ejoanne0422/front-end:1.0.0"
         resources:
           requests:
             memory: "64Mi"

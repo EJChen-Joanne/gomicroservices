@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: auth-service
-        image: "ejoanne0422/auth-service:1.0.1"
+        image: "ejoanne0422/auth-service:1.0.0"
         resources:
           requests:
             memory: "64Mi"
