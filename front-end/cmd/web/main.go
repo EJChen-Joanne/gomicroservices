@@ -6,7 +6,6 @@ import (
 	"html/template"
 	"log"
 	"net/http"
-	"os"
 )
 
 func main() {
@@ -46,8 +45,8 @@ func render(w http.ResponseWriter, html_root string) {
 	var data struct {
 		BrokerURL string
 	}
-	data.BrokerURL = os.Getenv("BROKER_URL")
-	//data.BrokerURL = "http://localhost:8080"
+	//data.BrokerURL = os.Getenv("BROKER_URL")
+	data.BrokerURL = "http://localhost:8080" //if don't use port 8080 will fail
 
 	if err := tpl.Execute(w, data); err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)

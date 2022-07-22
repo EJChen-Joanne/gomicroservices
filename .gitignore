@@ -1,5 +1,8 @@
-.vscode/*
-
+./auth-service/authApp
+./listener-service/listenerApp
+./logger-service/loggerApp
+./mail-service/mailApp
+./broker-service/brokerApp
 # Binaries for programs and plugins
 *.exe
 *.exe~
@@ -17,10 +20,3 @@
 go.work
 
 GoMicro_project/db-data/*
-
-auth-service/authApp
-listener-service/listenerApp
-logger-service/loggerApp
-mail-service/mailApp
-broker-service/brokerApp
-.vscode/targets.log
