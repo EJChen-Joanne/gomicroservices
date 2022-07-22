@@ -1,8 +1,3 @@
-./auth-service/authApp
-./listener-service/listenerApp
-./logger-service/loggerApp
-./mail-service/mailApp
-./broker-service/brokerApp
 # Binaries for programs and plugins
 *.exe
 *.exe~
@@ -20,3 +15,11 @@
 go.work
 
 GoMicro_project/db-data/*
+broker-service/brokerApp
+auth-service/authApp
+front-end/frontApp
+front-end/frontEndLinux
+listener-service/listenerApp
+logger-service/loggerApp
+mail-service/mailApp
+.vscode/
