@@ -81,3 +81,6 @@ stop:
 	@echo "Front-end stopped!"
 
 
+help: Makefile
+	@echo " Choose a command:"
+	@sed -n 's/^##//p' $< | column -t -s ':' |  sed -e 's/^/ /'

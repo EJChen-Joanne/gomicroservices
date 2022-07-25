@@ -1,4 +1,4 @@
-## An Microservices Development in Golang Instance
+## A Simple Microservices Instance in Golang
 
 * Reference: [Working with Microservices in Go (Golang)](https://www.udemy.com/course/working-with-microservices-in-go/)
 
@@ -12,3 +12,5 @@
 * logger-service: logs information into a MongoDB.
 * mail-service: sends email.
 * listener-service: consumes messages through amqp, and sends instructions into the destination service.
+
+* Running direction, please follows [this](./GoMicro_project/README.md) in the *GoMicro_project*.
