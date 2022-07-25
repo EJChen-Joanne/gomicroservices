@@ -13,4 +13,4 @@
 * mail-service: sends email.
 * listener-service: consumes messages through amqp, and sends instructions into the destination service.
 
-* Running direction, please follows [this](./GoMicro_project/README.md) in the *GoMicro_project*.
+### How to run the system, please follows [this](./GoMicro_project/README.md) in the *GoMicro_project*.
