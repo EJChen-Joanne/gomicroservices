@@ -7,6 +7,7 @@
 
 ![Structure](./Structure.jpg)
 
+* front-end service: display the web pages.
 * broker-service: one of entry points of the system to connect to all the other services.
 * auth-service: authenticates users and connect to a Postgres database.
 * logger-service: logs information into a MongoDB.
